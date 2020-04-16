@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+''' This script gets dependencies of Odoo to version 11
+    * At first time installs "aptitude" as main manager of installations
+    * You can use it on Debian/Ubuntu as root user or sudo way:
+    
+        chmod +x install-deps-o11.py
+        ./install-deps-o11.py
+
+'''
 import os
 import re
 import sys
@@ -15,4 +23,4 @@ paqreppip = ['xlwt','PyPDF2','phonenumbers','pyOpenSSL','setuptools','cryptograp
 
 # Actualiza dependencias
 for i in paqreppip:
-    os.system('pip3 install --upgrade '+i)
+    os.system('pip3 install --upgrade %s' % (i))
