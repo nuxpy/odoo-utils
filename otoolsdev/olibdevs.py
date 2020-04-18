@@ -33,8 +33,7 @@ class olibdevs():
         return content_mainfest
     
     def contentinit(self):
-        content_init = '''# -*- coding: utf-8 -*-
-#from . import'''
+        content_init = ''''''
         return content_init
     
     def contentsecurity(self):
