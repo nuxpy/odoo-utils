@@ -41,6 +41,7 @@ def createmodel(get_model='', get_mode=''):
         return False
     if get_model:
         model_file = '%s.py' % get_model.lower().strip().replace('.','_')
+        add2init = model_file.split('.')[0]
         mnl = [i.capitalize() for i in get_model.split('.')]
         class_name = '%s%s' % (mnl[0], mnl[1])
         content = o.contentmodel(class_name, mode, get_model)
@@ -59,6 +60,7 @@ def createmodel(get_model='', get_mode=''):
             model_file_w = open(model_file, 'w')
             model_file_w.write(content)
             model_file_w.close()
+            os.system('echo "from . import %s" >> __init__.py' % add2init)
     return True
 
 def createmodelwizard(get_model='', get_mode=''):
@@ -74,6 +76,7 @@ def createmodelwizard(get_model='', get_mode=''):
         return False
     if get_model:
         model_file = '%s.py' % get_model.lower().strip().replace('.','_')
+        add2init = model_file.split('.')[0]
         mnl = [i.capitalize() for i in get_model.split('.')]
         class_name = '%s%s' % (mnl[0], mnl[1])
         content = o.contentmodelwizard(class_name, mode, get_model)
@@ -92,6 +95,7 @@ def createmodelwizard(get_model='', get_mode=''):
             model_file_w = open(model_file, 'w')
             model_file_w.write(content)
             model_file_w.close()
+            os.system('echo "\nfrom . import %s" >> __init__.py' % add2init)
     return True
 
 def createview(mode='', model='', views=''):
