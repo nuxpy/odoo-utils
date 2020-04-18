@@ -118,7 +118,7 @@ def createview(mode='', model='', views=''):
             if 'action' in args:
                 content += o.contentviewaction(mode, view_id, view_name, model_name)
             if 'menu' in args:
-                content += o.contentenu(mode, view_id)
+                content += o.contentmenu(mode, view_id)
             content += o.xmlfooter()
         if os.path.isfile(name_view_xml):
             if sys.version_info.major < 3:
