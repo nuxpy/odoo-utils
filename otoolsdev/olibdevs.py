@@ -366,32 +366,3 @@ class %s(models.TransientModel):
         return True
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
