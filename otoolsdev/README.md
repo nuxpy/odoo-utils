@@ -17,8 +17,10 @@ El código fuente se puede descargar desde el repositorio.
 Luego de descargado, se puede configurar de la siguiente manera, como usuario root:
 
 * Se copian los dos archivos olibdevs.py y otoolsdev.py en un directorio llamado otoolsdev en un sitio donde no se borren accidentalmente. Ejemplo **/opt/otoolsdev**
-* Se crea un enlace simbólico solo del fichero otoolsdev.py, puede ser: **ln -s /ruta/absoluta/otoolsdevs.py /usr/local/bin/otoolsdev**
 * Se debe tener permisos de ejecución: **chmod 755 /opt/otoolsdev -R**
+* Se crea un enlace simbólico solo del fichero _otoolsdev.py_, puede ser ejemplo:
+
+    ln -s /opt/otoolsdevs.py /usr/local/bin/otoolsdev
 
 ### Contenido
 
@@ -96,5 +98,6 @@ Si se desea crear todas las vistas, se puede usar el recurso all en el parámetr
 
 Esto permitirá crear una estructura de lo que pudiera tener un fichero vista completo en Odoo, luego se eliminan o agregan los elementos que realmente son requeridos. 
 
-### Autor
+Autor
+-----
 Félix Urbina
