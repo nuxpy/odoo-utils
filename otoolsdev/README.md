@@ -14,7 +14,7 @@ Estos scripts están diseñados para usar sobre ambientes de distribuciones _Lin
 
 El código fuente se puede descargar desde el repositorio.
 
-Luego de descargado, se puede configurar de la siguiente manera, como usuario root:
+Luego de descargado, se puede configurar de la siguiente manera, como usuario **root**:
 
 * Se copian los dos archivos olibdevs.py y otoolsdev.py en un directorio llamado otoolsdev en un sitio donde no se borren accidentalmente. Ejemplo **/opt/otoolsdev**
 * Se debe tener permisos de ejecución: **chmod 755 /opt/otoolsdev -R**
@@ -66,9 +66,9 @@ Los archivos principales se cargan con datos básicos, se deben modificar según
 ### ¿Cómo se usa?
 
 Inicialmente, para ver opciones de ayuda:
-
+```
     otoolsdev -h
-
+```
 **Crear modelos**
 
 Para crear un modelo se debe ingresar en el directorio donde será creado el fichero del modelo en cuestión, posteriormente se usa la siguiente instrucción: 
@@ -82,21 +82,21 @@ Cabe destacar que se debe ir antes a la ruta donde irán dispuestos los modelos 
 **Crear modelos para un wizard**
 
 La estructura de la clase de los wizards en Odoo es similar a la estructura de las clases para modelos o tablas estándares, sin embargo cambian algunas cosas, para crear dicha estructura se puede realizar de la siguiente manera:
-
+```
     otoolsdev -w sale.order -m inherit
-
+```
 Dentro del directorio correspondiente de wizard en la aplicación.
 
 **Crear vistas**
 
 Esta instrucción es un poco más extendida, requiere pasar por parámetros tanto el objeto, modo y la vista que se desea crear, por ejemplo:
-
+```
     otoolsdev --views=form,menu -m inherit -o sale.order
-
+```
 Si se desea crear todas las vistas, se puede usar el recurso all en el parámetro, por ejemplo:
-
+```
     otoolsdev --views=all -m inherit -o sale.order
-
+```
 Esto permitirá crear una estructura de lo que pudiera tener un fichero vista completo en Odoo, luego se eliminan o agregan los elementos que realmente son requeridos. 
 
 Autor
