@@ -19,8 +19,9 @@ Luego de descargado, se puede configurar de la siguiente manera, como usuario ro
 * Se copian los dos archivos olibdevs.py y otoolsdev.py en un directorio llamado otoolsdev en un sitio donde no se borren accidentalmente. Ejemplo **/opt/otoolsdev**
 * Se debe tener permisos de ejecución: **chmod 755 /opt/otoolsdev -R**
 * Se crea un enlace simbólico solo del fichero _otoolsdev.py_, puede ser ejemplo:
-
+```
     ln -s /opt/otoolsdevs.py /usr/local/bin/otoolsdev
+```
 
 ### Contenido
 
