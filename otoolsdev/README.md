@@ -72,9 +72,9 @@ Inicialmente, para ver opciones de ayuda:
 **Crear modelos**
 
 Para crear un modelo se debe ingresar en el directorio donde será creado el fichero del modelo en cuestión, posteriormente se usa la siguiente instrucción: 
-
+```
     otoolsdev -o sale.order -m inherit
-
+```
 Este comando genera un fichero según el objeto o modelo seleccionado, del ejemplo anterior, generaría un fichero: **sale_order.py**
 
 Cabe destacar que se debe ir antes a la ruta donde irán dispuestos los modelos en la estructura de la aplicación o módulo Odoo. Ejemplo: **my_app/models**
