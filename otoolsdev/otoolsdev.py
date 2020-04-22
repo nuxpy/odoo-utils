@@ -42,8 +42,7 @@ def createmodel(get_model='', get_mode=''):
     if get_model:
         model_file = '%s.py' % get_model.lower().strip().replace('.','_')
         add2init = model_file.split('.')[0]
-        mnl = [i.capitalize() for i in get_model.split('.')]
-        class_name = '%s%s' % (mnl[0], mnl[1])
+        class_name = ''.join(i.capitalize() for i in get_model.split('.'))
         content = o.contentmodel(class_name, mode, get_model)
         if os.path.isfile(model_file):
             if sys.version_info.major < 3:
@@ -77,8 +76,7 @@ def createmodelwizard(get_model='', get_mode=''):
     if get_model:
         model_file = '%s.py' % get_model.lower().strip().replace('.','_')
         add2init = model_file.split('.')[0]
-        mnl = [i.capitalize() for i in get_model.split('.')]
-        class_name = '%s%s' % (mnl[0], mnl[1])
+        class_name = ''.join(i.capitalize() for i in get_model.split('.'))
         content = o.contentmodelwizard(class_name, mode, get_model)
         if os.path.isfile(model_file):
             if sys.version_info.major < 3:
