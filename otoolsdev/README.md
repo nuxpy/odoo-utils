@@ -99,6 +99,5 @@ Si se desea crear todas las vistas, se puede usar el recurso all en el parámetr
 ```
 Esto permitirá crear una estructura de lo que pudiera tener un fichero vista completo en Odoo, luego se eliminan o agregan los elementos que realmente son requeridos. 
 
-Autor
------
+---
 Félix Urbina

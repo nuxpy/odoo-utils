@@ -16,5 +16,5 @@ Como usuario **root** se usa de la siguiente manera, ejemplo para instalar depen
 
     ./install-deps-o13.py
 
-### Autor
+---
 Félix Urbina
