@@ -182,6 +182,7 @@ class %s(models.TransientModel):
             <field name="name">kanban.%s.1</field>
             <field name="model">%s</field>
             <field name="priority" eval=""/>
+            <field name="inherit_id" ref=""/>
             <field name="arch" type="xml">
                 <kanban class="o_res_partner_kanban">
                     <field name=""/>
