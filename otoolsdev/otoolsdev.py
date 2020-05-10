@@ -137,8 +137,7 @@ def createview(mode='', model='', views=''):
             xml_file_w.close()
     else:
         print ("Use the following options to create a view:\n")
-        print ("\t--view new model_model_view.xml [all|form|tree|kanban|filter|menu|action]\n")
-        print ("\t--view inherit model_model_view.xml [all|form|tree|kanban|filter|menu|action]\n")
+        print ("\t--views=all or --views=form,tree,menu,action\nOptions: all|form|tree|kanban|filter|menu|action\n")
     return True
 
 def main():

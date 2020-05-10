@@ -41,7 +41,7 @@ class olibdevs():
         return security_csv
     
     def contentmodel(self, class_name, mode, model_name):
-        content_model = '''# -*- coding: utf-8 -*-
+        content_model_new = '''# -*- coding: utf-8 -*-
 import re
 from odoo import models, fields, api, _
 from odoo.exceptions import Warning
@@ -59,18 +59,63 @@ class %s(models.Model):
     _%s = '%s'
     _description = ''
     
+    #-INIT-FIELDS
     name = fields.Char('Name')
     description = fields.Text('Description')
+    #-END-FIELDS
     
     _order = 'name'    
     _sql_constraints = [
         ('name_uniq', 'unique(name)', 'The name must be unique!')
     ]
 ''' % (class_name, mode, model_name)
-        return content_model
+        content_model_inherit = '''# -*- coding: utf-8 -*-
+import re
+from odoo import models, fields, api, _
+from odoo.exceptions import Warning
+from odoo.tools import float_is_zero
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+import odoo.addons.decimal_precision as dp
+from datetime import *
+import pytz
+from pytz import timezone
+import logging
+_logger = logging.getLogger(__name__)
+
+
+class %s(models.Model):
+    _%s = '%s'
+    
+    #-INIT-FIELDS
+    #-END-FIELDS
+''' % (class_name, mode, model_name)
+        if mode == 'name':
+            content = content_model_new
+        else:
+            content = content_model_inherit
+        return content
     
     def contentmodelwizard(self, class_name, mode, model_name):
-        content_model = '''# -*- coding: utf-8 -*-
+        content_model_inherit = '''# -*- coding: utf-8 -*-
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError
+from datetime import *
+import requests
+import tempfile
+import io
+import zipfile
+import os
+import logging
+import csv
+logger = logging.getLogger(__name__)
+
+class %s(models.TransientModel):
+    _%s = '%s'
+    
+    #-INIT-FIELDS
+    #-END-FIELDS
+''' % (class_name, mode, model_name)
+        content_model_new = '''# -*- coding: utf-8 -*-
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 from datetime import *
@@ -87,15 +132,21 @@ class %s(models.TransientModel):
     _%s = '%s'
     _description = ''
     
+    #-INIT-FIELDS
     name = fields.Char('Name')
     description = fields.Text('Description')
+    #-END-FIELDS
     
     _order = 'name'    
     _sql_constraints = [
         ('name_uniq', 'unique(name)', 'The name must be unique!')
     ]
 ''' % (class_name, mode, model_name)
-        return content_model
+        if mode == 'name':
+            content = content_model_new
+        else:
+            content = content_model_inherit
+        return content
     
     def contentviewtree(self, mode, view_id, view_name, model_name):
         content_h = '''
