@@ -115,6 +115,7 @@ class %s(models.TransientModel):
             <field name="name">tree.%s</field>
             <field name="model">%s</field>
             <field name="priority" eval=""/>
+            <field name="mode">primary</field>
             <field name="arch" type="xml">
                 <tree name="" string="">
                     <field name=""/>
@@ -145,6 +146,7 @@ class %s(models.TransientModel):
             <field name="name">form.%s</field>
             <field name="model">%s</field>
             <field name="priority" eval=""/>
+            <field name="mode">primary</field>
             <field name="arch" type="xml">
                 <form name="" string="">
                     <header>
@@ -203,6 +205,7 @@ class %s(models.TransientModel):
             <field name="name">kanban.%s</field>
             <field name="model">%s</field>
             <field name="priority" eval=""/>
+            <field name="mode">primary</field>
             <field name="arch" type="xml">
                 <kanban class="o_res_partner_kanban">
                     <field name=""/>
