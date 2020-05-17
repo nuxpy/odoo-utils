@@ -58,16 +58,16 @@ _logger = logging.getLogger(__name__)
 class %s(models.Model):
     _%s = '%s'
     _description = ''
-    
+    _order = 'name'
+    _sql_constraints = [
+        ('name_uniq', 'unique(name)', 'The name must be unique!')
+    ]
     #-INIT-FIELDS
     name = fields.Char('Name')
     description = fields.Text('Description')
     #-END-FIELDS
     
-    _order = 'name'    
-    _sql_constraints = [
-        ('name_uniq', 'unique(name)', 'The name must be unique!')
-    ]
+    
 ''' % (class_name, mode, model_name)
         content_model_inherit = '''# -*- coding: utf-8 -*-
 import re
@@ -131,16 +131,16 @@ logger = logging.getLogger(__name__)
 class %s(models.TransientModel):
     _%s = '%s'
     _description = ''
-    
+    _order = 'name'
+    _sql_constraints = [
+        ('name_uniq', 'unique(name)', 'The name must be unique!')
+    ]
     #-INIT-FIELDS
     name = fields.Char('Name')
     description = fields.Text('Description')
     #-END-FIELDS
     
-    _order = 'name'    
-    _sql_constraints = [
-        ('name_uniq', 'unique(name)', 'The name must be unique!')
-    ]
+    
 ''' % (class_name, mode, model_name)
         if mode == 'name':
             content = content_model_new
