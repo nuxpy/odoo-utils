@@ -151,7 +151,7 @@ class %s(models.TransientModel):
     def contentviewtree(self, mode, view_id, view_name, model_name):
         content_h = '''
         <record id="tree_%s_1" model="ir.ui.view">
-            <field name="name">tree.%s.1</field>
+            <field name="name">tree.%s.view.1</field>
             <field name="model">%s</field>
             <field name="priority" eval=""/>
             <field name="inherit_id" ref=""/>
@@ -182,7 +182,7 @@ class %s(models.TransientModel):
     def contentviewform(self, mode, view_id, view_name, model_name):
         content_h = '''
         <record id="form_%s_1" model="ir.ui.view">
-            <field name="name">form.%s.1</field>
+            <field name="name">form.%s.view.1</field>
             <field name="model">%s</field>
             <field name="priority" eval=""/>
             <field name="inherit_id" ref=""/>
@@ -232,7 +232,7 @@ class %s(models.TransientModel):
     def contentviewkanban(self, mode, view_id, view_name, model_name):
         content_h = '''
         <record id="kanban_%s_1" model="ir.ui.view">
-            <field name="name">kanban.%s.1</field>
+            <field name="name">kanban.%s.view.1</field>
             <field name="model">%s</field>
             <field name="priority" eval=""/>
             <field name="inherit_id" ref=""/>
@@ -300,7 +300,7 @@ class %s(models.TransientModel):
     def contentviewfilter(self, mode, view_id, view_name, model_name):
         content_h = '''
         <record id="filter_%s_1" model="ir.ui.view">
-            <field name="name">filter.%s.1</field>
+            <field name="name">filter.%s.view.1</field>
             <field name="model">%s</field>
             <field name="priority" eval=""/>
             <field name="inherit_id" ref=""/>
