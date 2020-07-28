@@ -11,6 +11,7 @@
 import os, re, sys
 
 paqrepdeb = "git"
+oca = 'https://github.com/OCA/'
 branch = '13.0'
 repositories = ['account-closing', 'account-consolidation', 'account-financial-tools',
     'account-payment', 'account-reconcile', 'bank-payment', 'calendar', 'connector-ecommerce',
@@ -26,4 +27,4 @@ if not os.path.exists('oca'):
     os.mkdir('oca')
 
 for r in repositories:
-    os.system('cd oca; git clone -b %s %s' % (branch, r))
+    os.system('cd oca; git clone -b %s %s%s' % (branch, oca, r))
