@@ -65,6 +65,7 @@ class %s(models.Model):
     #-INIT-FIELDS
     name = fields.Char('Name')
     description = fields.Text('Description')
+    active = fields.Boolean(default=True)
     #-END-FIELDS
     
     
