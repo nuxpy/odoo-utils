@@ -285,7 +285,6 @@ class %s(models.TransientModel):
             <field name="name">%s</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">%s</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[]</field>
             <field name="context">{"search_default_":1,'default_':1}</field>
