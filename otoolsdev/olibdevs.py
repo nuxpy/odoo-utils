@@ -62,12 +62,13 @@ class %s(models.Model):
     _sql_constraints = [
         ('name_uniq', 'unique(name)', 'The name must be unique!')
     ]
-    #-INIT-FIELDS
+    """ START-FIELDS
+    """
     name = fields.Char('Name')
     description = fields.Text('Description')
     active = fields.Boolean(default=True)
-    #-END-FIELDS
-    
+    """ END-FIELDS
+    """
     
 ''' % (class_name, mode, model_name)
         content_model_inherit = '''# -*- coding: utf-8 -*-
@@ -87,8 +88,10 @@ _logger = logging.getLogger(__name__)
 class %s(models.Model):
     _%s = '%s'
     
-    #-INIT-FIELDS
-    #-END-FIELDS
+    """ INIT-FIELDS
+    """
+    """ END-FIELDS
+    """
 ''' % (class_name, mode, model_name)
         if mode == 'name':
             content = content_model_new
