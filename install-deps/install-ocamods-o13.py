@@ -13,10 +13,31 @@ import os, re, sys
 paqrepdeb = "git"
 oca = 'https://github.com/OCA/'
 branch = '13.0'
-repositories = ['account-closing', 'account-consolidation', 'account-financial-tools',
-    'account-payment', 'account-reconcile', 'bank-payment', 'calendar', 'connector-ecommerce',
-    'crm', 'e-commerce', 'hr', 'hr-expense', 'hr-holidays', 'l10n-spain', 'vertical-hotel',
-    'web', 'website', 'website-cms', 'website-themes'
+repositories = [
+    'account-closing',
+    'account-consolidation',
+    'account-financial-tools',
+    'account-payment',
+    'account-reconcile',
+    'bank-payment',
+    'brand',
+    'calendar',
+    'connector-ecommerce',
+    'crm',
+    'e-commerce',
+    'helpdesk',
+    'hr',
+    'hr-attendance',
+    'hr-expense',
+    'hr-holidays',
+    'l10n-spain',
+    'project',
+    'vertical-hotel',
+    'web',
+    'website',
+    'website-cms',
+    'website-themes'
+    
 ]
 
 os.system('apt-get install aptitude')
