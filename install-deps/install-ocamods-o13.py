@@ -29,6 +29,7 @@ repositories = [
     'hr',
     'hr-attendance',
     'hr-expense',
+    'timesheet',
     'hr-holidays',
     'l10n-spain',
     'project',
