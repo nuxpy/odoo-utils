@@ -29,16 +29,21 @@ repositories = [
     'hr',
     'hr-attendance',
     'hr-expense',
-    'timesheet',
     'hr-holidays',
     'l10n-spain',
     'project',
+    'stock-logistics-barcode',
+    'stock-logistics-reporting',
+    'stock-logistics-tracking',
+    'stock-logistics-transport',
+    'stock-logistics-warehouse',
+    'stock-logistics-workflow',
+    'timesheet',
     'vertical-hotel',
     'web',
     'website',
     'website-cms',
     'website-themes'
-    
 ]
 
 os.system('apt-get install aptitude')
