@@ -56,4 +56,4 @@ if not os.path.exists('oca'):
         os.system('cd oca; git clone -b %s %s%s' % (branch, oca, r))
 else:
     for r in repositories:
-        os.system('cd oca; git pull %s%s' % (oca, r))
+        os.system('cd oca/%s; git pull; cd -' % (r))
