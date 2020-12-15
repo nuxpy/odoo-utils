@@ -11,7 +11,7 @@
 import os, re, sys
 
 paqrepdeb = "git"
-oca = 'https://github.com/OCA/'
+ocaurl = 'https://github.com/OCA/'
 branch = '13.0'
 repositories = [
     'account-closing',
@@ -52,8 +52,11 @@ if not os.path.exists('oca'):
     os.system('aptitude -yr install %s' % (paqrepdeb))
     os.mkdir('oca')
     for r in repositories:
-        os.system('cd oca; git clone -b %s %s%s' % (branch, oca, r))
+        os.system('cd oca; git clone -b %s %s%s' % (branch, ocaurl, r))
 else:
     for r in repositories:
+        if not os.path.exists('oca/%s' % r):
+            os.mkdir('oca/%s')
+            os.system('cd oca; git clone -b %s %s%s; cd -' % (branch, ocaurl, r))
         os.system('cd oca/%s; git pull; cd -' % (r))
 
