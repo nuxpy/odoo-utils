@@ -58,5 +58,6 @@ else:
         if not os.path.exists('oca/%s' % r):
             os.mkdir('oca/%s')
             os.system('cd oca; git clone -b %s %s%s' % (branch, ocaurl, r))
-        os.system('cd oca/%s; git pull' % (r))
+        else:
+            os.system('cd oca/%s; git pull' % (r))
 
