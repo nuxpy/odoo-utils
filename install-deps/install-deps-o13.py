@@ -17,7 +17,7 @@ os.system('aptitude update')
 os.system('aptitude -yr install %s' % (paqrepdeb))
 
 paqreppip = ['xlwt','PyPDF2','phonenumbers','pyOpenSSL','setuptools','cryptography',
-    'cffi','six','pycparser','client','num2words','flanker','xlrd']
+    'cffi','six','pycparser','client','num2words','flanker','xlrd', 'odoo13-addon-web-environment-ribbon']
 
 # Actualiza dependencias
 for i in paqreppip:
