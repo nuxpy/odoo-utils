@@ -20,6 +20,7 @@ repositories = [
     'account-payment',
     'account-reconcile',
     'bank-payment',
+    'bank-statement-import',
     'brand',
     'calendar',
     'connector-ecommerce',
