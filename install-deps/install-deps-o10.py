@@ -11,6 +11,8 @@ import os
 import re
 import sys
 
+''' Debian packages
+'''
 paqrepdeb = ['adduser','node-less','postgresql-client','python','python-babel','python-dateutil','python-decorator','python-docutils','python-feedparser','python-imaging','python-jinja2','python-ldap','python-libxslt1','python-lxml','python-mako','python-mock','python-openid','python-passlib','python-psutil','python-psycopg2','python-pychart','python-pydot','python-pyparsing','python-pypdf','python-reportlab','python-requests','python-suds','python-tz','python-vatnumber','python-vobject','python-werkzeug','python-xlsxwriter','python-xlwt','python-yaml','wkhtmltopdf','python-pip','numpy']
 
 os.system('apt-get install aptitude')
@@ -18,9 +20,17 @@ os.system('aptitude update')
 for i in paqrepdeb:
     os.system('aptitude -yr install %s' % (paqrepdeb))
 
+
+''' Download wkhtmltopdf
+'''
+wkh2pdf = 'wkhtmltox_0.12.6-1.buster_amd64.deb'
+url_html2pdf = 'https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/%s' % wkh2pdf
+os.system('wget -c %s' % url_html2pdf)
+os.system('dpkg -i %s' % wkh2pdf)
+
+''' PIP packages
+'''
 paqreppip = ['xlwt','PyPDF2','phonenumbers','pyOpenSSL','setuptools','cryptography',
   'cffi','six','pycparser','client','num2words','flanker','xlrd']
-
-# Actualiza dependencias
 for i in paqreppip:
     os.system('pip install --upgrade %s' % (i))
