@@ -30,6 +30,6 @@ os.system('dpkg -i %s' % wkh2pdf)
 ''' PIP packages
 '''
 paqreppip = ['xlwt','PyPDF2','phonenumbers','pyOpenSSL','setuptools','cryptography',
-    'cffi','six','pycparser','client','num2words','flanker','xlrd', 'odoo13-addon-web-environment-ribbon']
+    'cffi','six','pycparser','client','num2words','flanker','xlrd', 'odoo13-addon-web-environment-ribbon','numpy','component']
 for i in paqreppip:
     os.system('pip3 install --upgrade %s' % (i))
