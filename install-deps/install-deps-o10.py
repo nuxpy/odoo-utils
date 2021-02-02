@@ -13,7 +13,7 @@ import sys
 
 ''' Debian packages
 '''
-paqrepdeb = ['adduser','node-less','postgresql-client','python','python-babel','python-dateutil','python-decorator','python-docutils','python-feedparser','python-imaging','python-jinja2','python-ldap','python-libxslt1','python-lxml','python-mako','python-mock','python-openid','python-passlib','python-psutil','python-psycopg2','python-pychart','python-pydot','python-pyparsing','python-pypdf','python-reportlab','python-requests','python-suds','python-tz','python-vatnumber','python-vobject','python-werkzeug','python-xlsxwriter','python-xlwt','python-yaml','wkhtmltopdf','python-pip','numpy']
+paqrepdeb = ['adduser','node-less','postgresql-client','python','python-babel','python-dateutil','python-decorator','python-docutils','python-feedparser','python-imaging','python-jinja2','python-ldap','python-libxslt1','python-lxml','python-mako','python-mock','python-openid','python-passlib','python-psutil','python-psycopg2','python-pychart','python-pydot','python-pyparsing','python-pypdf','python-reportlab','python-requests','python-suds','python-tz','python-vatnumber','python-vobject','python-werkzeug','python-xlsxwriter','python-xlwt','python-yaml','wkhtmltopdf','python-pip','numpy','xfonts-75dpi']
 
 os.system('apt-get install aptitude')
 os.system('aptitude update')

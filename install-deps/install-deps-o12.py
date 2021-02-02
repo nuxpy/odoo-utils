@@ -13,7 +13,7 @@ import os, re, sys
 
 ''' Debian packages
 '''
-paqrepdeb = ['python3-babel','python3-dateutil','python3-decorator','python3-docutils','python3-feedparser','python3-gevent','python3-html2text','python3-jinja2','python3-lxml','python3-mock','python3-ofxparse','python3-passlib','python3-pil','python3-psutil','python3-psycopg2','python3-pydot','python3-pyparsing','python3-pypdf2','python3-reportlab','python3-serial','python3-tz','python3-usb','python3-vatnumber','python3-werkzeug','python3-xlsxwriter','python3-libsass','python3-suds','xvfb','python3-pip','python3-mako','python3-xlrd','postgresql-11','wkhtmltopdf']
+paqrepdeb = ['python3-babel','python3-dateutil','python3-decorator','python3-docutils','python3-feedparser','python3-gevent','python3-html2text','python3-jinja2','python3-lxml','python3-mock','python3-ofxparse','python3-passlib','python3-pil','python3-psutil','python3-psycopg2','python3-pydot','python3-pyparsing','python3-pypdf2','python3-reportlab','python3-serial','python3-tz','python3-usb','python3-vatnumber','python3-werkzeug','python3-xlsxwriter','python3-libsass','python3-suds','xvfb','python3-pip','python3-mako','python3-xlrd','postgresql-11','wkhtmltopdf','xfonts-75dpi']
 
 os.system('apt-get install aptitude')
 os.system('aptitude update')
