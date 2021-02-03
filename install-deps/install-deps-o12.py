@@ -17,7 +17,7 @@ paqrepdeb = ['python3-babel','python3-dateutil','python3-decorator','python3-doc
 
 os.system('apt-get install aptitude')
 os.system('aptitude update')
-for p in paqrepdeb
+for p in paqrepdeb:
     os.system('aptitude -yr install %s' % p)
 
 
