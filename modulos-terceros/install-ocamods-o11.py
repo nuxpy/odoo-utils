@@ -33,6 +33,7 @@ repositories = [
     'hr-holidays',
     'l10n-spain',
     'project',
+    'server-env',
     'stock-logistics-barcode',
     'stock-logistics-reporting',
     'stock-logistics-tracking',
