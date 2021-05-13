@@ -26,6 +26,7 @@ repositories = [
     'connector-ecommerce',
     'crm',
     'e-commerce',
+    'edi',
     'helpdesk',
     'hr',
     'hr-attendance',
