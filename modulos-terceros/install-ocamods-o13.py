@@ -17,6 +17,7 @@ repositories = [
     'account-closing',
     'account-consolidation',
     'account-financial-tools',
+    'account-invoicing',
     'account-payment',
     'account-reconcile',
     'bank-payment',
