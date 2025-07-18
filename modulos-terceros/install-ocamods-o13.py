@@ -17,17 +17,14 @@ repositories = [
     'account-closing',
     'account-consolidation',
     'account-financial-tools',
-    'account-invoicing',
     'account-payment',
     'account-reconcile',
     'bank-payment',
-    'bank-statement-import',
     'brand',
     'calendar',
     'connector-ecommerce',
     'crm',
     'e-commerce',
-    'edi',
     'helpdesk',
     'hr',
     'hr-attendance',
@@ -35,7 +32,6 @@ repositories = [
     'hr-holidays',
     'l10n-spain',
     'project',
-    'server-env',
     'stock-logistics-barcode',
     'stock-logistics-reporting',
     'stock-logistics-tracking',
@@ -51,6 +47,9 @@ repositories = [
 ]
 
 if not os.path.exists('oca'):
+    os.system('apt-get install aptitude')
+    os.system('aptitude update')
+    os.system('aptitude -yr install %s' % (paqrepdeb))
     os.mkdir('oca')
     for r in repositories:
         os.system('cd oca; git clone -b %s %s%s' % (branch, ocaurl, r))
